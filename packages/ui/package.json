@@ -1,18 +1,38 @@
 {
-  "name": "ui",
+  "name": "@68696c6c/turboui",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
-  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
+    "build": "rollup --config",
+    "dev": "rollup --config -w",
     "lint": "eslint *.ts*"
   },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.0",
+    "@radix-ui/react-visually-hidden": "^1.0.0",
+    "@stitches/react": "^1.2.8"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2 || ^18.0.0-0"
+  },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.4.0",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-delete": "^2.0.0",
     "tsconfig": "*",
     "typescript": "^4.5.2"
   }
